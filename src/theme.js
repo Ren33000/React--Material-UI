@@ -6,5 +6,6 @@ export const theme = createTheme({
         primary: {
             main: blue[500]
         }
-    }
+    },
+    spacing: 4,
 })
