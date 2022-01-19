@@ -1,5 +1,5 @@
 import { AppBar, Toolbar, Typography, makeStyles, InputBase, alpha, Badge, Avatar } from "@material-ui/core";
-import { Mail, Search, Notifications } from "@material-ui/icons";
+import { Mail, Search, Notifications, Cancel } from "@material-ui/icons";
 import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
@@ -30,11 +30,17 @@ const useStyles = makeStyles((theme) => ({
         width: "50%",
         [theme.breakpoints.down("sm")]: {
             display: (props) => (props.open ? "flex" : "none"),
+            width: "60%"
         },
     },
     input: {
         color: "white",
         marginLeft: theme.spacing(1),
+    },
+    cancel: {
+        [theme.breakpoints.up("sm")] : {
+            display: "none",
+        },
     },
     searchButton: {
         marginRight: theme.spacing(2),
@@ -64,6 +70,7 @@ const Navbar = () => {
                 <div className={classes.search}>
                     <Search/>
                     <InputBase placeholder="Search..." className={classes.input}/>
+                    <Cancel className={classes.cancel} onClick={() => setOpen(false)}/>
                 </div>
                 <div className={classes.icons}>
                     <Search 
@@ -84,3 +91,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
