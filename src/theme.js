@@ -7,5 +7,4 @@ export const theme = createTheme({
             main: blue[500]
         }
     },
-    spacing: 4,
 })
