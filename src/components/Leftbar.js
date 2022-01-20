@@ -6,7 +6,9 @@ const useStyles = makeStyles((theme) => ({
     container: {
         height: "100vh",
         paddingTop: theme.spacing(10),
-        background: theme.palette.primary.main, 
+        background: theme.palette.primary.main,
+        position: "sticky",
+        top: 0, 
         [theme.breakpoints.up("sm")]: {
             background: "white",
             color: "#555",

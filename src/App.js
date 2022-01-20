@@ -1,5 +1,6 @@
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
+import Add from "./components/Add";
 import Feed from "./components/Feed";
 import Leftbar from "./components/Leftbar";
 import Navbar from "./components/Navbar";
@@ -23,6 +24,7 @@ const App = () => {
       <Grid item sm={7} xs={10}> <Feed /> </Grid>
       <Grid item sm={3} className={classes.right}> <Rightbar /> </Grid>
     </Grid> 
+    <Add />
   </div>;
 };
 
