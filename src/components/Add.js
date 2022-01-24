@@ -22,8 +22,13 @@ const useStyles = makeStyles((theme) => ({
             width: "100vwh",
             height: "100vh",
         }
-
-    }
+    },
+    form: {
+        padding: theme.spacing(2),
+    },
+    item: {
+        marginBottom: theme.spacing(3),
+    },
 }));
 
 const Add = () => {
@@ -71,9 +76,8 @@ const Add = () => {
                             </RadioGroup>
                         </div>
                         <div className={classes.item}>
-                            <Button variant="outlined" color="primary">Create</Button>
-                            <Button variant="outlined" color="secondary">Cancel</Button>
-
+                            <Button variant="outlined" color="primary" style={{ marginRight: 20}}>Create</Button>
+                            <Button variant="outlined" color="secondary" onClick={() => setOpen(false)}>Cancel</Button>
                         </div>
                     </form>
                 </Container>
